@@ -1,20 +1,20 @@
 [
     {
-      "name": "Lionel Scaloni",
-      "description": "Experienced instructor specializing in Yoga.",
-      "image_url": "https://www.footballdatabase.eu/images/photos/players/a_1/1658.jpg",
-      "students": 80
-    },
-    {
       "name": "Tom Moody",
       "description": "Professional dance instructor with a passion for teaching.",
-      "image_url": "https://media.gettyimages.com/id/2618073/photo/portrait-of-tom-moody-of-worcestershire-taken-during-the-worcestershire-county-cricket-club.jpg?s=612x612&w=gi&k=20&c=FbVW3AlLOhW5y8ecUcYIwQ313mjTKpUDzdAk32FP4tI=",
+      "image_url": "https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_800,q_50/lsci/db/PICTURES/CMS/346300/346328.jpg",
       "students": 65
     },
     {
+        "name": "Lionel Scaloni",
+        "description": "Experienced instructor specializing in Yoga.",
+        "image_url": "https://s.hs-data.com/bilder/spieler/gross/2664.jpg",
+        "students": 80
+      },
+    {
       "name": "Pullela Gopichand",
       "description": "Highly skilled tennis coach with years of experience.",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Pullela_Gopichand_2016_%28cropped%29.jpg/220px-Pullela_Gopichand_2016_%28cropped%29.jpg",
+      "image_url": "https://sportsmatik.com/uploads/world-events/players/pullela-gopichand_1564559236.jpg",
       "students": 50
     },
     {
@@ -30,9 +30,9 @@
       "students": 35
     },
     {
-      "name": "Bishweshwar Nandi ",
+      "name": "Jordan Sheppard",
       "description": "Skilled martial arts instructor specialized in self-defense techniques.",
-      "image_url": "https://images.mid-day.com/images/images/2016/aug/22Bisheswar-Nandi.jpg",
+      "image_url": "https://media.licdn.com/dms/image/C4E03AQF6R8x1bgj3Lg/profile-displayphoto-shrink_800_800/0/1631118356492?e=2147483647&v=beta&t=sZKf39SxUcbDsyfwr7WzwsCMazXf9b8HTwZM60kyczA",
       "students": 30
     }
 ]
