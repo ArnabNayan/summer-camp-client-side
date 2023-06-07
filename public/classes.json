@@ -1,0 +1,62 @@
+[
+    {
+      "class_name": "Football",
+      "description": "Learn the fundamentals of football and enhance your skills on the field.",
+      "image_url": "https://example.com/football.jpg",
+      "students": 75
+    },
+    {
+      "class_name": "Basketball",
+      "description": "Improve your basketball techniques and strategies through rigorous training sessions.",
+      "image_url": "https://example.com/basketball.jpg",
+      "students": 20
+    },
+    {
+      "class_name": "Swimming",
+      "description": "Dive into the world of swimming and develop your proficiency in various strokes.",
+      "image_url": "https://example.com/swimming.jpg",
+      "students": 55
+    },
+    {
+      "class_name": "Tennis",
+      "description": "Master your tennis skills and compete in friendly matches with fellow enthusiasts.",
+      "image_url": "https://example.com/tennis.jpg",
+      "students": 52
+    },
+    {
+      "class_name": "Gymnastics",
+      "description": "Discover the artistry and athleticism of gymnastics under the guidance of experienced coaches.",
+      "image_url": "https://example.com/gymnastics.jpg",
+      "students": 48
+    },
+    {
+      "class_name": "Martial Arts",
+      "description": "Learn self-defense techniques and discipline through martial arts training.",
+      "image_url": "https://example.com/martial_arts.jpg",
+      "students": 42
+    },
+    {
+        "class_name": "Cricket",
+        "description": "Experience the thrill of cricket and enhance your batting, bowling, and fielding abilities.",
+        "image_url": "https://example.com/cricket.jpg",
+        "students": 95
+    },
+    {
+      "class_name": "Volleyball",
+      "description": "Join a team-oriented sport and improve your skills in spiking, setting, and blocking.",
+      "image_url": "https://example.com/volleyball.jpg",
+      "students": 34
+    },
+    {
+      "class_name": "Athletics",
+      "description": "Train in track and field events like sprints, long jump, and shot put with expert coaches.",
+      "image_url": "https://example.com/athletics.jpg",
+      "students": 30
+    },
+    {
+        "class_name": "Badminton",
+        "description": "Learn the skills and techniques of badminton, from basic strokes to advanced strategies.",
+        "image_url": "https://example.com/badminton.jpg",
+        "students": 72
+    }
+]
