@@ -2,61 +2,61 @@
     {
       "class_name": "Football",
       "description": "Learn the fundamentals of football and enhance your skills on the field.",
-      "image_url": "https://example.com/football.jpg",
+      "image_url": "https://www.footballmania.in/wp-content/uploads/2023/01/training-equipment2-300x300.jpg",
       "students": 75
     },
     {
       "class_name": "Basketball",
       "description": "Improve your basketball techniques and strategies through rigorous training sessions.",
-      "image_url": "https://example.com/basketball.jpg",
+      "image_url": "https://azclubprep.com/wp-content/uploads/AZCLUBPREP-214-300x300.jpg",
       "students": 20
     },
     {
       "class_name": "Swimming",
       "description": "Dive into the world of swimming and develop your proficiency in various strokes.",
-      "image_url": "https://example.com/swimming.jpg",
+      "image_url": "https://www.movingbodies.com.au/wp-content/uploads/2018/02/toddler-learn-to-swim-class-hornsby-1-300x300.jpg",
       "students": 55
     },
     {
       "class_name": "Tennis",
       "description": "Master your tennis skills and compete in friendly matches with fellow enthusiasts.",
-      "image_url": "https://example.com/tennis.jpg",
+      "image_url": "https://www.vamosaustralia.com.au/wp-content/uploads/2021/01/vamosaustralia-___CDbYd9Tgkrr___--300x300.jpg",
       "students": 52
     },
     {
       "class_name": "Gymnastics",
       "description": "Discover the artistry and athleticism of gymnastics under the guidance of experienced coaches.",
-      "image_url": "https://example.com/gymnastics.jpg",
+      "image_url": "https://www.gymandmoresc.com/wp-content/uploads/gymnastics_education_gymnast_2_1-300x300.png",
       "students": 48
     },
     {
       "class_name": "Martial Arts",
       "description": "Learn self-defense techniques and discipline through martial arts training.",
-      "image_url": "https://example.com/martial_arts.jpg",
+      "image_url": "https://akulatkd.com/wp-content/uploads/2023/03/Self-Defense-for-Kids-at-Akula-Taekwondo-New-Hudson-MI-Karate-Classes-300x300.jpg",
       "students": 42
     },
     {
         "class_name": "Cricket",
         "description": "Experience the thrill of cricket and enhance your batting, bowling, and fielding abilities.",
-        "image_url": "https://example.com/cricket.jpg",
+        "image_url": "https://femalecricketacademy.com/wp-content/uploads/2019/05/femalecricketacademy-mainbody6-300x300.jpg",
         "students": 95
     },
     {
       "class_name": "Volleyball",
       "description": "Join a team-oriented sport and improve your skills in spiking, setting, and blocking.",
-      "image_url": "https://example.com/volleyball.jpg",
+      "image_url": "https://www.spikesport.com/wp-content/uploads/2021/10/shutterstock_628377176-300x300.jpg",
       "students": 34
     },
     {
       "class_name": "Athletics",
       "description": "Train in track and field events like sprints, long jump, and shot put with expert coaches.",
-      "image_url": "https://example.com/athletics.jpg",
+      "image_url": "https://completetri.com/wp-content/uploads/becomeacoach-300x223.jpg",
       "students": 30
     },
     {
         "class_name": "Badminton",
         "description": "Learn the skills and techniques of badminton, from basic strokes to advanced strategies.",
-        "image_url": "https://example.com/badminton.jpg",
+        "image_url": "https://www.lta.org.uk/491dd5/siteassets/news/2023/february/badminton-court.jpg?w=300&h=300&c.focus=1762.25625,1057.71106941839,1762.25625,1057.71106941839&c.finalmode=crop&mode=crop&c.zoom=false",
         "students": 72
     }
 ]
