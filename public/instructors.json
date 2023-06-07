@@ -1,0 +1,39 @@
+[
+    {
+      "name": "Lionel Scaloni",
+      "description": "Experienced instructor specializing in Yoga.",
+      "image_url": "https://www.footballdatabase.eu/images/photos/players/a_1/1658.jpg",
+      "students": 80
+    },
+    {
+      "name": "Tom Moody",
+      "description": "Professional dance instructor with a passion for teaching.",
+      "image_url": "https://media.gettyimages.com/id/2618073/photo/portrait-of-tom-moody-of-worcestershire-taken-during-the-worcestershire-county-cricket-club.jpg?s=612x612&w=gi&k=20&c=FbVW3AlLOhW5y8ecUcYIwQ313mjTKpUDzdAk32FP4tI=",
+      "students": 65
+    },
+    {
+      "name": "Pullela Gopichand",
+      "description": "Highly skilled tennis coach with years of experience.",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Pullela_Gopichand_2016_%28cropped%29.jpg/220px-Pullela_Gopichand_2016_%28cropped%29.jpg",
+      "students": 50
+    },
+    {
+      "name": "Michael Bohl",
+      "description": "Certified swimming instructor dedicated to teaching water safety.",
+      "image_url": "https://deow9bq0xqvbj.cloudfront.net/ep-logo/pbblog2647644/Michael_Bohlapss4_300x300.jpg",
+      "students": 40
+    },
+    {
+      "name": "Wally Masur",
+      "description": "Expert basketball coach known for developing players' skills.",
+      "image_url": "https://www.celebrityspeakers.com.au/content/uploads/2020/10/MASUR-Wally-PIC.jpg",
+      "students": 35
+    },
+    {
+      "name": "Bishweshwar Nandi ",
+      "description": "Skilled martial arts instructor specialized in self-defense techniques.",
+      "image_url": "https://images.mid-day.com/images/images/2016/aug/22Bisheswar-Nandi.jpg",
+      "students": 30
+    }
+]
+   
