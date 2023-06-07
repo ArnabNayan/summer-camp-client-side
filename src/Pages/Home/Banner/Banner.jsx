@@ -21,7 +21,7 @@ const Banner = () => {
                                 <h1 className='text-center text-xl lg:text-6xl lg:ms-8 text-white font-bold'>Welcome to Best Sports Academy </h1>
                                 <h1 className='text-center text-lg lg:text-5xl lg:ms-8 lg:mt-10 text-blue-200 font-bold '>Get The Best Training From <br /> our summer camp </h1></div>
                             <div className='pt-8'>
-                                <button className="btn btn-secondary font-semibold text-xl">Get Started</button>
+                                <button className="btn  btn-secondary font-semibold text-xl">Get Started</button>
                             </div>
 
                         </div>
@@ -55,7 +55,7 @@ const Banner = () => {
                             className="bg-cover backdrop-brightness-20 bg-center h-64 lg:h-screen w-full "
                             style={{
                                 backgroundImage:
-                                    "url('https://www.shutterstock.com/image-photo/football-soccer-background-row-spotlights-260nw-1636679536.jpg')",
+                                    "url('https://static.vecteezy.com/system/resources/thumbnails/014/762/729/small/of-world-cup-2022-fifa-world-cup-or-world-cup-qatar-background-of-world-cup-qatar-with-3d-ball-combine-with-grunge-background-free-vector.jpg')",
                             }}
                         >
                             <div className="w-full h-full items-center left-0  top-0 bg-gradient-to-r from-[black] to-[gray) 100%">
@@ -66,7 +66,7 @@ const Banner = () => {
                                     <h1 className='text-center text-xl lg:text-6xl lg:ms-8 text-white font-bold'>Welcome to Best Sports Academy </h1>
                                     <h1 className='text-center text-lg lg:text-5xl lg:ms-8 lg:mt-10 text-blue-200 font-bold '>Get The Best Training From <br />our summer camp </h1> </div>
                                     <div className='pt-8'>
-                                <button className="btn btn-secondary font-semibold text-xl">Get Started</button>
+                                <button className="btn  btn-secondary font-semibold text-xl">Get Started</button>
                             </div>
                             </div>
                         </div>
