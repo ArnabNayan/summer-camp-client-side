@@ -6,6 +6,7 @@ const Navbar = () => {
         <li className="font-serif text-lg"><Link to="/">Home</Link> </li>
         <li  className="font-serif text-lg"><Link to="/instructors">Instructors</Link> </li>
         <li  className="font-serif text-lg"><Link to="/classes">Classes</Link> </li>
+        <li  className="font-serif text-lg"><Link to="/login">Login</Link> </li>
     </>
     return (
         <div className="navbar fixed h-20 z-10 bg-opacity-30 max-w-screen-xl mx-auto bg-slate-600 text-white">
