@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import HeadingTitle from "../HeadingTitle/HeadingTitle";
 
 
-const Instructors = () => {
+
+const Instructorss = () => {
     const [instructors, setInstructors] = useState([])
     useEffect(() => {
         fetch('instructors.json')
@@ -11,6 +12,7 @@ const Instructors = () => {
     }, [])
     return (
         <section>
+        
             <HeadingTitle heading='Our Top Instructors'>
             </HeadingTitle>
                
@@ -29,4 +31,4 @@ const Instructors = () => {
     );
 };
 
-export default Instructors;
+export default Instructorss;
