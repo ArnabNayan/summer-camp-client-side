@@ -5,10 +5,11 @@ import Swal from "sweetalert2";
 import useAxiosSecure from "../../Components/Hooks/useAxiosSecure";
 
 const Allusers = () => {
+  
     const [axiosSecure]=useAxiosSecure()
     const {data:users=[],refetch}=useQuery(['users'],async()=>{
-        const res=await axiosSecure.get('/users')
-        return res.data;
+      const res=await axiosSecure.get('/users')
+      return res.data;
     })
     
     const handleMakeAdmin = user => {
@@ -29,6 +30,7 @@ const Allusers = () => {
               })
             }
           })
+        
       }
 
       const handleMakeInstructors = user => {
