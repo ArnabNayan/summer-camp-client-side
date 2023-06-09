@@ -14,6 +14,7 @@ const Navbar = () => {
         <li className="font-serif text-lg"><Link to="/">Home</Link> </li>
         <li  className="font-serif text-lg"><Link to="/instructors">Instructors</Link> </li>
         <li  className="font-serif text-lg"><Link to="/classes">Classes</Link> </li>
+        <li  className="font-serif text-lg"><Link to="/dashboard">Dashboard</Link> </li>
        
         {
           user? <><button onClick={handleLogOut} className="btn btn-ghost">LogOut</button>
