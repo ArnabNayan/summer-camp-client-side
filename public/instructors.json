@@ -3,37 +3,43 @@
       "name": "Tom Moody",
       "description": "Professional dance instructor with a passion for teaching.",
       "image_url": "https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_800,q_50/lsci/db/PICTURES/CMS/346300/346328.jpg",
-      "students": 65
+      "students": 65,
+      "email":"tom@gmail.com"
     },
     {
         "name": "Lionel Scaloni",
         "description": "Experienced instructor specializing in Yoga.",
         "image_url": "https://s.hs-data.com/bilder/spieler/gross/2664.jpg",
-        "students": 80
+        "students": 80,
+        "email":"lio@gmail.com"
       },
     {
       "name": "Pullela Gopichand",
       "description": "Highly skilled tennis coach with years of experience.",
       "image_url": "https://sportsmatik.com/uploads/world-events/players/pullela-gopichand_1564559236.jpg",
-      "students": 50
+      "students": 50,
+      "email":"gopi@gmail.com"
     },
     {
       "name": "Michael Bohl",
       "description": "Certified swimming instructor dedicated to teaching water safety.",
       "image_url": "https://deow9bq0xqvbj.cloudfront.net/ep-logo/pbblog2647644/Michael_Bohlapss4_300x300.jpg",
-      "students": 40
+      "students": 40,
+      "email":"bohl@gmail.com"
     },
     {
       "name": "Wally Masur",
       "description": "Expert basketball coach known for developing players' skills.",
       "image_url": "https://www.celebrityspeakers.com.au/content/uploads/2020/10/MASUR-Wally-PIC.jpg",
-      "students": 35
+      "students": 35,
+      "email":"wally@gmail.com"
     },
     {
       "name": "Jordan Sheppard",
       "description": "Skilled martial arts instructor specialized in self-defense techniques.",
       "image_url": "https://media.licdn.com/dms/image/C4E03AQF6R8x1bgj3Lg/profile-displayphoto-shrink_800_800/0/1631118356492?e=2147483647&v=beta&t=sZKf39SxUcbDsyfwr7WzwsCMazXf9b8HTwZM60kyczA",
-      "students": 30
+      "students": 30,
+      "email":"jordan@gmail.com"
     }
 ]
    
