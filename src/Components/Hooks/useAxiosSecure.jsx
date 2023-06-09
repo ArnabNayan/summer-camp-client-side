@@ -1,14 +1,14 @@
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-// import { AuthContext } from '../Providers/AuthProvider';
-import { useEffect } from "react";
-import useAuth from './useAuth';
+import { AuthContext } from '../Providers/AuthProvider';
+import { useContext, useEffect } from "react";
+
 const axiosSecure = axios.create({
     baseURL: 'http://localhost:5000', // Replace with your API base URL
 });
 const useAxiosSecure = () => {
     const navigate = useNavigate();
-    const { logOut } = useAuth();
+    const { logOut } =useContext(AuthContext) ;
 
 
     useEffect(() => {
@@ -31,8 +31,7 @@ const useAxiosSecure = () => {
             async (error) => {
                 if (error.response && (error.response.status === 401 || error.response.status === 403)) {
                     await logOut()
-                    navigate('/login'); // Use useNavigate to navigate to the login page after logout
-
+                    navigate('/login'); 
                 }
                 return Promise.reject(error);
             }
