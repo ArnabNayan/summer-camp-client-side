@@ -1,5 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { Helmet } from "react-helmet-async";
+import { FaUserShield } from "react-icons/fa";
 import Swal from "sweetalert2";
 
 const Allusers = () => {
@@ -29,7 +30,7 @@ const Allusers = () => {
       }
 
       const handleMakeInstructors = user => {
-        fetch(`http://localhost:5000/users/admin/${user._id}`, {
+        fetch(`http://localhost:5000/users/instructors/${user._id}`, {
           method: 'PATCH'
         })
           .then(res => res.json())
@@ -40,7 +41,7 @@ const Allusers = () => {
               Swal.fire({
                 position: 'top-end',
                 icon: 'success',
-                title: `${user.name} is an Admin Now!`,
+                title: `${user.name} is an Instructors Now!`,
                 showConfirmButton: false,
                 timer: 1500
               })
@@ -63,8 +64,8 @@ const Allusers = () => {
         <th>#</th>
         <th>Name</th>
         <th>Email</th>
-        <th>Role</th>
-        <th>Role</th>
+        <th>Make Admin</th>
+        <th>Make Instructors</th>
       </tr>
     </thead>
     <tbody>
@@ -74,14 +75,14 @@ const Allusers = () => {
                 <th>{index+1}</th>
                 <td>{user.name} </td>
                 <td>{user.email}</td>
-                <td>{user.role==='admin'?<button onClick={()=>handleMakeAdmin(user._id)} className="btn btn-ghost  bg-pink-600 text-white">Admin </button>:<button  className="btn btn-ghost  bg-pink-600 text-white">Users </button>} </td>
-                <td>{user.role==='instructors'?<button onClick={()=>handleMakeInstructors(user._id)} className="btn btn-ghost  bg-putple-600 text-white">Instructors </button>:<button  className="btn btn-ghost  bg-pink-600 text-white">Users </button>} </td>
+                <td>{user.role==='admin'? 'admin':<button onClick={()=>handleMakeAdmin(user)} className="btn btn-ghost  bg-pink-600 text-white"><FaUserShield></FaUserShield></button>} </td>
+                <td>{user.role==='instructors'?'instructors':<button onClick={()=>handleMakeInstructors(user)} className="btn btn-ghost  bg-purple-600 text-white"><FaUserShield></FaUserShield> </button>} </td>
               </tr>
             )
         }
       
-     
-    
+      {/* <button onClick={()=>handleMakeAdmin(user)} className="btn btn-ghost  bg-pink-600 text-white">Admin </button> */}
+      {/* <button onClick={()=>handleMakeInstructors(user)} className="btn btn-ghost  bg-putple-600 text-white">Instructors </button> */}
     </tbody>
   </table>
 </div>            
