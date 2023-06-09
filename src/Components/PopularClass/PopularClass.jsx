@@ -3,7 +3,7 @@ import HeadingTitle from "../HeadingTitle/HeadingTitle";
 
 const PopularClass = () => {
     const [classes, setClasses] = useState([]);
-    console.log(classes)
+    // console.log(classes)
 
     useEffect(() => {
         fetch('http://localhost:5000/classes')
