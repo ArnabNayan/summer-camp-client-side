@@ -2,11 +2,20 @@ import { Helmet } from "react-helmet-async";
 import {Link} from "react-router-dom";
 import SocialLogin from "../SocialLogin/SocialLogin";
 import { useForm } from "react-hook-form";
+import { AuthContext } from "../../Providers/AuthProvider";
+import { useContext } from "react";
 const Login = () => {
   const { register, handleSubmit} = useForm();
+  const { signIn}=useContext(AuthContext)
   const onSubmit=data=>{
-      console.log(data)
+      console.log(data);
+      signIn(data.email,data.password)
+      .then(result=>{
+        const user=result.user;
+        console.log(user)
+      })
   };
+  
     return (
       <>
         <Helmet>
