@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import {Link} from "react-router-dom";
+import {Link,useLocation,useNavigate} from "react-router-dom";
 import SocialLogin from "../SocialLogin/SocialLogin";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../../Providers/AuthProvider";
@@ -7,7 +7,10 @@ import { useContext } from "react";
 import Swal from "sweetalert2";
 const Login = () => {
   const { register, handleSubmit} = useForm();
-  const { signIn}=useContext(AuthContext)
+  const { signIn}=useContext(AuthContext);
+  const navigate=useNavigate()
+  const location=useLocation()
+  const from=location.state?.from?.pathname || "/";
   const onSubmit=data=>{
       console.log(data);
       signIn(data.email,data.password)
@@ -23,7 +26,11 @@ const Login = () => {
             popup: 'animate__animated animate__fadeOutUp'
           }
         })
+        navigate(from,{replace:true});
       })
+      .catch(error=>{
+        console.log(error.message)
+    })
   };
   
     return (
