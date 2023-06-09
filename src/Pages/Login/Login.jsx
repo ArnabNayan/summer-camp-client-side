@@ -4,6 +4,7 @@ import SocialLogin from "../SocialLogin/SocialLogin";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { useContext } from "react";
+import Swal from "sweetalert2";
 const Login = () => {
   const { register, handleSubmit} = useForm();
   const { signIn}=useContext(AuthContext)
@@ -13,6 +14,15 @@ const Login = () => {
       .then(result=>{
         const user=result.user;
         console.log(user)
+        Swal.fire({
+          title: 'Login Successful',
+          showClass: {
+            popup: 'animate__animated animate__fadeInDown'
+          },
+          hideClass: {
+            popup: 'animate__animated animate__fadeOutUp'
+          }
+        })
       })
   };
   
