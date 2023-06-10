@@ -9,7 +9,7 @@ const AddClass = () => {
     const onSubmit = data => {
         const{classname,instructorname,price,availableseats,photo,email}=data;
         const newClass={classname,instructorname,availableseats,price:parseFloat(price),photo,email}
-        axiosSecure.post('/classes',newClass)
+        axiosSecure.post('/instructorclass',newClass)
         .then(data=>{
             console.log('after posting new class',data.data);
             if(data.data.insertedId){
