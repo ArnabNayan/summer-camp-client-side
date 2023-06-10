@@ -1,10 +1,29 @@
 import HeadingTitle from "../../Components/HeadingTitle/HeadingTitle";
 import { useForm } from 'react-hook-form';
-
+import useAxiosSecure from "../../Components/Hooks/useAxiosSecure";
+import Swal from "sweetalert2";
+// import { useQuery } from "@tanstack/react-query";
 const AddClass = () => {
-    const { register, handleSubmit, formState: { errors } } = useForm();
+    const [axiosSecure]=useAxiosSecure();
+    const { register, handleSubmit, formState: { errors },reset } = useForm();
     const onSubmit = data => {
-        console.log(data);
+        const{classname,instructorname,price,availableseats,photo,email}=data;
+        const newClass={classname,instructorname,availableseats,price:parseFloat(price),photo,email}
+        axiosSecure.post('/classes',newClass)
+        .then(data=>{
+            console.log('after posting new class',data.data);
+            if(data.data.insertedId){
+                reset();
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'Class added successfully',
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
+            }
+        })
+        // console.log(data);
     }
     console.log(errors);
     return (
@@ -12,8 +31,9 @@ const AddClass = () => {
             <HeadingTitle heading='Add a Class'>
             </HeadingTitle>
             <div className="bg-[#F4F3F0] p-24">
-
+       
                 <form onSubmit={handleSubmit(onSubmit)}>
+
                     <div className="md:flex mb-8">
                         <div className="form-control md:w-1/2 ">
                             <label className="label">
@@ -21,8 +41,8 @@ const AddClass = () => {
                             </label>
                             <label className="input-group">
 
-                                <input type="text" name="name" placeholder="Class Name" 
-                                {...register("class name", {required: true, maxLength: 80})}className="input input-bordered w-full" />
+                                <input type="classname" name="classname" placeholder="Class Name" 
+                                {...register("classname", {required: true, maxLength: 80})}className="input input-bordered w-full" />
                             </label>
                         </div>
                         <div className="form-control md:w-1/2 ml-4">
@@ -31,7 +51,7 @@ const AddClass = () => {
                             </label>
                             <label className="input-group">
 
-                                <input type="text" name="quantity" placeholder="Available Seats" {...register("available seats", {required: true})} className="input input-bordered w-full" />
+                                <input type="quantity" name="quantity" placeholder="Available Seats" {...register("availableseats", {required: true})} className="input input-bordered w-full" />
                             </label>
                         </div>
                     </div>
@@ -44,7 +64,7 @@ const AddClass = () => {
                             </label>
                             <label className="input-group">
 
-                                <input type="text" name="name" placeholder="Instructor Name"{...register("instructor name", {required: true})} className="input input-bordered w-full" />
+                                <input type="name" name="name" placeholder="Instructor Name"{...register("instructorname", {required: true})} className="input input-bordered w-full" />
                             </label>
                         </div>
                         <div className="form-control md:w-1/2 ml-4">
