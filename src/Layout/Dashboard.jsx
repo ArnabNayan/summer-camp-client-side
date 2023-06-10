@@ -1,12 +1,31 @@
-import {Outlet,NavLink} from "react-router-dom";
+import {Outlet,NavLink, useNavigate} from "react-router-dom";
+
 import { FaHome} from 'react-icons/fa';
 import useAdmin from "../Components/Hooks/useAdmin";
 import useInstructor from "../Components/Hooks/useInstructor";
+import { useEffect } from "react";
 const Dashboard = () => {
   // const isAdmin=true;
   // const isInstructor=true;
+  const navigate = useNavigate();
   const [isAdmin]=useAdmin()
   const [isInstructor]=useInstructor()
+
+  useEffect(() => {
+    // Determine the initial route based on the user's role
+    let initialRoute = '';
+
+    if (isAdmin) {
+      initialRoute = '/dashboard/allusers';
+    } else if (isInstructor) {
+      initialRoute = '/dashboard/addclass';
+    } else {
+      initialRoute = '/dashboard/myclasses';
+    }
+
+    // Redirect to the initial route when entering the dashboard
+    navigate(initialRoute);
+  }, [isAdmin, isInstructor, navigate]);
     return (
         <div className="drawer lg:drawer-open">
   <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
@@ -25,7 +44,7 @@ const Dashboard = () => {
          <li><NavLink to="/dashboard/manageclass"> Manage Classes </NavLink></li>
       <li><NavLink to="/dashboard/allusers"> Manage Users </NavLink></li>
       </>: isInstructor?<>
-      <li><NavLink to="/dashboard/instructorshome"><FaHome></FaHome>Instructors Home </NavLink></li>
+      {/* <li><NavLink to="/dashboard/instructorshome"><FaHome></FaHome>Instructors Home </NavLink></li> */}
       <li><NavLink to="/dashboard/addclass"> Add Class </NavLink></li>
       <li><NavLink to="/dashboard/myclass"> My Classes </NavLink></li>
       <li><NavLink to="/dashboard/enrollstudents"> Total Enrolled Students </NavLink></li>

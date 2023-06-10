@@ -5,8 +5,10 @@ import useClass from "../../Components/Hooks/useClass";
 
 const ManageClass = () => {
     const [instructorclass]=useClass()
+
+
     return (
-        <div className="w-full">
+        <div className="w-auto">
             <HeadingTitle heading='My Class'>
             </HeadingTitle> 
             <div className="overflow-x-auto">
@@ -16,8 +18,11 @@ const ManageClass = () => {
       <tr>
         <th>#</th>
         <th>Class Name</th>
-        <th>Total Enrolled Students</th>
-        <th>Feedback</th>
+        <th>Instructor Name</th>
+        <th>Email</th>
+        <th>Available Seats</th>
+        <th>Price</th>
+        
         <th>Status</th>
         <th>Status</th>
         <th>Status</th>
@@ -41,8 +46,11 @@ const ManageClass = () => {
                      </div>
                      </div>
                         </td>
-            <td>0</td>
-            <td>Feedback</td>
+           <td>{instructorclasses.instructorname} </td>
+           <td>{instructorclasses.email} </td>
+           <td>{instructorclasses.availableseats} </td>
+           <td>{instructorclasses.price}</td>
+           
             <td>
                 <button className="btn btn-ghost btn-xs">pending</button>
             </td>
@@ -52,9 +60,8 @@ const ManageClass = () => {
             <td>
                 <button className="btn btn-ghost btn-xs">denied</button>
             </td>
-         
-            <td>
-                <button className="btn btn-ghost btn-xs">update</button>
+             <td>
+                <button className="btn btn-ghost btn-xs">Feedback</button>
             </td>
           </tr>)
      }
