@@ -2,10 +2,11 @@
 import HeadingTitle from "../../Components/HeadingTitle/HeadingTitle";
 import useClass from "../../Components/Hooks/useClass";
 
-
 const MyClass = () => {
-    const [instructorclass] = useClass();
-   
+    const [instructorclass,updateClassStatus] = useClass();
+    const handleUpdateStatus = async (id, status) => {
+        await updateClassStatus.mutateAsync({ id, status });
+      };
     return (
         <div className="w-full">
             <HeadingTitle heading='My Class'>
@@ -20,28 +21,40 @@ const MyClass = () => {
                             <th>Total Enrolled Students</th>
                             <th>Feedback</th>
                             <th>Status</th>
-                            <th>Status</th>
-                            <th>Status</th>
-
+                          
                             <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
                         {
-                            instructorclass.map((instructorclasses, index) => <tr key={instructorclasses._id}>
+                            instructorclass.map((instructorclass, index) => <tr key={instructorclass._id}>
                                 <th>{index + 1}</th>
-                                <td>{instructorclasses.classname}</td>
+                                <td>{instructorclass.classname}</td>
                                 <td>0</td>
                                 <td>Feedback</td>
                                 <td>
-                                    <button className="btn btn-ghost btn-xs">pending</button>
-                                </td>
-                                <td>
-                                    <button  className="btn btn-ghost btn-xs">approved</button>
-                                </td>
-                                <td>
-                                    <button className="btn btn-ghost btn-xs"  >denied</button>
-                                </td>
+                                <button className="btn btn-ghost btn-xs">
+                    {instructorclass.status || 'pending'}
+                  </button>
+                            </td>
+                            <td>
+                  {instructorclass.status === 'pending' && (
+                    <button
+                      className="btn btn-ghost btn-xs"
+                      onClick={() => handleUpdateStatus(instructorclass._id, 'approved')}
+                    >
+                      Approve
+                    </button>
+                  )}
+                  {instructorclass.status === 'pending' && (
+                    <button
+                      className="btn btn-ghost btn-xs"
+                      onClick={() => handleUpdateStatus(instructorclass._id, 'denied')}
+                    >
+                      Deny
+                    </button>
+                  )}
+                </td>
 
                                 <td>
                                     <button className="btn btn-ghost btn-xs">update</button>
@@ -58,3 +71,10 @@ const MyClass = () => {
 };
 
 export default MyClass;
+
+{/* <td>
+<button  className="btn btn-ghost btn-xs">approved</button>
+</td>
+<td>
+<button className="btn btn-ghost btn-xs"  >denied</button>
+</td> */}
