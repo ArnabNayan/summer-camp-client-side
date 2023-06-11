@@ -27,18 +27,18 @@ const MyClass = () => {
                     </thead>
                     <tbody>
                         {
-                            instructorclass.map((instructorclass, index) => <tr key={instructorclass._id}>
+                            instructorclass.map((instructorclasses, index) => <tr key={instructorclasses._id}>
                                 <th>{index + 1}</th>
-                                <td>{instructorclass.classname}</td>
+                                <td>{instructorclasses.classname}</td>
                                 <td>0</td>
                                 <td>Feedback</td>
                                 <td>
                                 <button className="btn btn-ghost btn-xs">
-                    {instructorclass.status || 'pending'}
+                    {instructorclasses.status || 'pending'}
                   </button>
                             </td>
                             <td>
-                  {instructorclass.status === 'pending' && (
+                  {instructorclasses.status === 'pending' && (
                     <button
                       className="btn btn-ghost btn-xs"
                       onClick={() => handleUpdateStatus(instructorclass._id, 'approved')}
@@ -46,7 +46,7 @@ const MyClass = () => {
                       Approve
                     </button>
                   )}
-                  {instructorclass.status === 'pending' && (
+                  {instructorclasses.status === 'pending' && (
                     <button
                       className="btn btn-ghost btn-xs"
                       onClick={() => handleUpdateStatus(instructorclass._id, 'denied')}
