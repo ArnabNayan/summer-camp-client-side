@@ -1,10 +1,13 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
+import { FaShoppingCart } from 'react-icons/fa';
+import useSelectClass from "../../Components/Hooks/useSelectClass";
 
 
 const Navbar = () => {
   const{user,logOut}=useContext(AuthContext)
+  const [classes]=useSelectClass()
   const handleLogOut = () => {
     logOut()
       .then(() => { })
@@ -15,6 +18,11 @@ const Navbar = () => {
         <li  className="font-serif text-lg"><Link to="/instructors">Instructors</Link> </li>
         <li  className="font-serif text-lg"><Link to="/classes">Classes</Link> </li>
         <li  className="font-serif text-lg"><Link to="/dashboard">Dashboard</Link> </li>
+        <li> <Link to='/'><button className="btn gap-2">
+      <FaShoppingCart></FaShoppingCart>
+        <div className="badge badge-secondary">+{classes?.length || 0}</div>
+      </button></Link>
+    </li>
        
         {
           user? <><button onClick={handleLogOut} className="btn btn-ghost">LogOut</button>

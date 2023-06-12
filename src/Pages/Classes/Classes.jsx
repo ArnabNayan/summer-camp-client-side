@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
+import Classdetails from "./Classdetails";
 
 
 
@@ -30,24 +31,7 @@ const Classes = () => {
       
  <div className="grid grid-cols-1 md:grid-cols-3 ">
      
- {classes.map((classItem) => (
-
-
-<div key={classItem._id} className="card w-96  bg-base-100 shadow-xl mt-24">
-
-<figure><img className="w-96 h-96" src={classItem.photo} alt="Shoes" /></figure>
-<div className="card-body">
-<h2 className="card-title">Name: {classItem.classname}</h2>
-<p>Instructor: {classItem.instructorname}</p>
-<p>Available Seats: {classItem.availableseats}</p>
-<p>Price: {classItem.price}</p>
-<div className="card-actions justify-end">
-<button className="btn btn-secondary mx-auto">Select</button>
-</div>
-</div>
-</div>
-
-))}
+ {classes.map((item) =><Classdetails key={item._id}item={item}></Classdetails> )}
  </div>
         </div>
     );
