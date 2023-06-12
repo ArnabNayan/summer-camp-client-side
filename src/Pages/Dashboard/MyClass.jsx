@@ -39,20 +39,22 @@ const MyClass = () => {
                             </td>
                             <td>
                   {instructorclasses.status === 'pending' && (
-                    <button
-                      className="btn btn-ghost btn-xs"
-                      onClick={() => handleUpdateStatus(instructorclass._id, 'approved')}
-                    >
-                      Approve
-                    </button>
+                     <button
+                     className="btn btn-ghost btn-xs"
+                     disabled={instructorclasses.status === 'approved' || instructorclasses.status === 'denied'}
+                     onClick={() => handleUpdateStatus({ id: instructorclasses._id, status: 'approved' })}
+                   >
+                     Approve
+                   </button>
                   )}
                   {instructorclasses.status === 'pending' && (
                     <button
-                      className="btn btn-ghost btn-xs"
-                      onClick={() => handleUpdateStatus(instructorclass._id, 'denied')}
-                    >
-                      Deny
-                    </button>
+                    className="btn btn-ghost btn-xs"
+                    disabled={instructorclasses.status === 'approved' || instructorclasses.status === 'denied'}
+                    onClick={() => handleUpdateStatus({ id: instructorclasses._id, status: 'denied' })}
+                  >
+                    Deny
+                  </button>
                   )}
                 </td>
 
