@@ -7,7 +7,7 @@ const ManageClass = () => {
     // const [instructorclass, refetch] = useClass()
   
     const [instructorclass, setInstructorClass] = useState([]);
-
+ 
     const fetchData = async () => {
       try {
         const res = await fetch('http://localhost:5000/instructorclass');
@@ -24,6 +24,7 @@ const ManageClass = () => {
   
     const handleApprove = async (id) => {
       try {
+        
         await fetch(`http://localhost:5000/instructorclass/${id}/approve`, {
           method: 'PATCH',
           headers: { 'Content-Type': 'application/json' },
@@ -31,11 +32,12 @@ const ManageClass = () => {
         fetchData();
       } catch (error) {
         console.error('Error approving class:', error);
-      }
+      } 
     };
   
     const handleDeny = async (id) => {
       try {
+     
         await fetch(`http://localhost:5000/instructorclass/${id}/deny`, {
           method: 'PATCH',
           headers: { 'Content-Type': 'application/json' },
@@ -95,7 +97,7 @@ const ManageClass = () => {
                                     </button>
                                 </td>
                    
-                                <td>
+                                 <td>
                   <button className="btn btn-ghost btn-xs" onClick={() => handleApprove(instructorclasses._id)}>
                     Approve
                   </button>
@@ -104,7 +106,9 @@ const ManageClass = () => {
                   <button className="btn btn-ghost btn-xs" onClick={() => handleDeny(instructorclasses._id)}>
                     Deny
                   </button>
-                </td>
+                </td> 
+
+
                                
                                 <td>
                                     <button className="btn btn-ghost btn-xs">Feedback</button>
