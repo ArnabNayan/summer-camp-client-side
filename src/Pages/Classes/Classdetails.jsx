@@ -52,6 +52,7 @@ const Classdetails = ({item}) => {
           })
        }
     }
+  
     return (
         <div className="card w-96  bg-base-100 shadow-xl mt-24">
 
