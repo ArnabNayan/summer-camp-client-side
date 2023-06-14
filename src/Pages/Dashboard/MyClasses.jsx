@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const MyClasses = () => {
     const [classes,refetch]=useSelectClass()
-    const total=classes.reduce((sum,item)=>item.price+sum,0)
+    // const total=classes.reduce((sum,item)=>item.price+sum,0)
 
     const handlaDelete=classes=>{
         Swal.fire({
@@ -43,7 +43,7 @@ const MyClasses = () => {
             </HeadingTitle>
             <div className="uppercase font-semibold h-[60px] flex justify-evenly items-center">
                 <h3 className="text-2xl">Total selected class:{classes.length}</h3>
-                <h3 className="text-2xl">Total Price:${total}</h3>
+                {/* <h3 className="text-2xl">Total Price:${total}</h3> */}
             </div>
 
             <div className="overflow-x-auto">
@@ -84,7 +84,8 @@ const MyClasses = () => {
                 </td>
                
                 <th>
-                 <Link to="/dashboard/payment"> <button className="btn btn-secondary btn-xs">Pay</button></Link>
+                  <Link to="/dashboard/payment"> <button className="btn btn-secondary btn-xs">Pay</button></Link> 
+              
                 </th>
                 <th>
                   <button onClick={()=>handlaDelete(classes)} className="btn btn-primary btn-xs">Delete</button>
@@ -105,3 +106,5 @@ const MyClasses = () => {
 };
 
 export default MyClasses;
+
+

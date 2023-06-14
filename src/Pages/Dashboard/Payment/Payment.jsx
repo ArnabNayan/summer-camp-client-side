@@ -14,12 +14,15 @@ const Payment = () => {
         <div className="w-full">
                 <HeadingTitle heading='Payment Form'>
             </HeadingTitle>
-           <h2>My Taka</h2> 
+           
            <Elements stripe={stripePromise}>
-                <CheckoutForm price={price}></CheckoutForm>
+                <CheckoutForm classes={classes}price={price} ></CheckoutForm>
             </Elements>
         </div>
     );
 };
 
 export default Payment;
+
+
+
