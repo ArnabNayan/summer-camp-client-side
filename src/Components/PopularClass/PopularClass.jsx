@@ -50,7 +50,7 @@ const PopularClass = () => {
                     //     <img src={classItem.image_url} alt={classItem.class_name} />
                     //   </div>
                     <div key={index} className="card w-96 bg-base-100 shadow-xl">
-                        <figure><img className="w-full" src={classItem.image_url} alt="Shoes" /></figure>
+                        <figure><img className="w-full hover:scale-110" src={classItem.image_url} alt="Shoes" /></figure>
                         <div className="card-body">
                             <h2 className="font-serif card-title">{classItem.class_name} Academy</h2>
                          

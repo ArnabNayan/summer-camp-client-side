@@ -19,6 +19,7 @@ import MyClass from "../Pages/Dashboard/MyClass";
 import ManageClass from "../Pages/Dashboard/ManageClass";
 import Payment from "../Pages/Dashboard/Payment/Payment";
 import History from "../Pages/Dashboard/History";
+import EnrollClass from "../Pages/Dashboard/EnrollClass";
 
 
 
@@ -81,6 +82,10 @@ import History from "../Pages/Dashboard/History";
         {
           path:'history',
           element:<History></History>
+        },
+        {
+          path:'enroll',
+          element:<EnrollClass></EnrollClass>
         }
       ]
     }

@@ -56,7 +56,7 @@ const Classdetails = ({item}) => {
     return (
         <div className="card w-96  bg-base-100 shadow-xl mt-24">
 
-        <figure><img className="w-96 h-96" src={photo} alt="Shoes" /></figure>
+        <figure><img className="w-96 h-96 hover:scale-110" src={photo} alt="Shoes" /></figure>
         <div className="card-body">
         <h2 className="card-title">Name: {classname}</h2>
         <p>Instructor: {instructorname}</p>

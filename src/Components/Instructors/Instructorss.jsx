@@ -19,7 +19,7 @@ const Instructorss = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 mt-14">
                 {instructors.map((instructor, index) => (
                   <div key={index} className="card card-compact w-96 bg-base-100 shadow-xl ">
-                    <figure><img className="w-full h-96" src={instructor.image_url} alt="Instructor" /></figure>
+                    <figure><img className="w-full h-96 hover:scale-110" src={instructor.image_url} alt="Instructor" /></figure>
                     <div className="card-body mx-auto">
                       <h2 className="card-title font-serif">{instructor.name}</h2>
                     </div>
